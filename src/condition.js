@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
 export default function (props) {
-  let [minTemp, setminTemp] = useState(props.minTemp);
-  let [maxTemp, setmaxTemp] = useState(props.maxTemp);
-
   return (
     <div>
       <h1>
