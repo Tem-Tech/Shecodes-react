@@ -1,6 +1,7 @@
 import "./style.css";
 import SearchForm from "./search";
 import Heading from "./heading";
+import WeatherForecast from "./WeatherForecast";
 function App() {
   return (
     <div className="App">
@@ -9,7 +10,7 @@ function App() {
         <Heading />
         <SearchForm />
         <br />
-
+        <WeatherForecast />
         <div></div>
         <hr />
         <footer>
