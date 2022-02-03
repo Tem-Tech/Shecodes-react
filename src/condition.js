@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
-export default function (props) {
+export default function Conditions(props) {
   return (
     <div>
       <h1>
