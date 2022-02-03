@@ -16,7 +16,7 @@ function App() {
           <p>
             This project was coded by{" "}
             <a
-              href="https://github.com/Tem-Tech/weather-app-React"
+              href="https://github.com/Tem-Tech/Shecodes-react"
               target="_blank"
               rel="noopener noreferrer"
             >
