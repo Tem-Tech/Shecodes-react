@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Conditions from "./condition";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 export default function SearchForm() {
@@ -49,6 +50,7 @@ export default function SearchForm() {
           <input type="submit" value="🔍" className="form-btn" />
           <input type="submit" value="📌" className="form-btn" />
         </form>
+        <WeatherForecast data={report.coordinates} />
       </div>
     );
   } else {
