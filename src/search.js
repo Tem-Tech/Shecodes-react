@@ -11,6 +11,8 @@ export default function SearchForm() {
     setReport({
       ready: true,
       coordinates: response.data.coord,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
@@ -50,7 +52,7 @@ export default function SearchForm() {
           <input type="submit" value="🔍" className="form-btn" />
           <input type="submit" value="📌" className="form-btn" />
         </form>
-        <WeatherForecast data={report.coordinates} />
+        <WeatherForecast lat={report.lat} lon={report.lon} />
       </div>
     );
   } else {
