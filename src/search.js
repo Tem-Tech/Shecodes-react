@@ -29,8 +29,18 @@ export default function SearchForm() {
     event.preventDefault();
     search();
   }
+  function showPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=9a3b65ea12488fdd227f03eda47a0bf6&units=metric`;
+    axios.get(apiUrl).then(weatherReport);
+  }
   function cityChange(event) {
     setCity(event.target.value);
+  }
+  function currentCity(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
   }
   function search() {
     let apiKey = "2f77a721f146c97e77d99956a2de9fe0";
@@ -50,8 +60,14 @@ export default function SearchForm() {
             onChange={cityChange}
           />
           <input type="submit" value="🔍" className="form-btn" />
-          <input type="submit" value="📌" className="form-btn" />
+          <input
+            type="button"
+            value=" 📍 "
+            className="form-btn"
+            onClick={currentCity}
+          />
         </form>
+        <hr />
         <h3>This week...</h3>
         <WeatherForecast
           coordinates={report.coordinates}
