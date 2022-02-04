@@ -3,8 +3,9 @@ import "./style.css";
 export default function Conditions(props) {
   return (
     <div>
+      <br />
       <h1>
-        {props.data.city}, {props.data.country}
+        📍 {props.data.city}, {props.data.country}
       </h1>
       <ul className="stats">
         <li>

@@ -52,6 +52,7 @@ export default function SearchForm() {
           <input type="submit" value="🔍" className="form-btn" />
           <input type="submit" value="📌" className="form-btn" />
         </form>
+        <h3>This week...</h3>
         <WeatherForecast
           coordinates={report.coordinates}
           lat={report.lat}
@@ -62,24 +63,17 @@ export default function SearchForm() {
   } else {
     return (
       <div>
-        <h2>
+        <h5>
           What is your city?{" "}
           <span role="img" aria-label="emoji">
             🧐
           </span>
-        </h2>
-        <ul className="stats">
-          <li>Description: </li>
+        </h5>
 
-          <li>Feels like: </li>
-
-          <li>Humidity: </li>
-
-          <li>Windsped: </li>
-        </ul>
         <form id="city-search" onSubmit={handleSubmit}>
           <input
             type="search"
+            g
             placeholder="Search City Here..."
             className="form-control"
             id="search-input"
