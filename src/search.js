@@ -52,7 +52,11 @@ export default function SearchForm() {
           <input type="submit" value="🔍" className="form-btn" />
           <input type="submit" value="📌" className="form-btn" />
         </form>
-        <WeatherForecast lat={report.lat} lon={report.lon} />
+        <WeatherForecast
+          coordinates={report.coordinates}
+          lat={report.lat}
+          lon={report.lon}
+        />
       </div>
     );
   } else {
