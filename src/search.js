@@ -96,7 +96,12 @@ export default function SearchForm() {
             onChange={cityChange}
           />
           <input type="submit" value="🔍" className="form-btn" />
-          <input type="submit" value="📌" className="form-btn" />
+          <input
+            type="button"
+            value=" 📍 "
+            className="form-btn"
+            onClick={currentCity}
+          />{" "}
         </form>
       </div>
     );
