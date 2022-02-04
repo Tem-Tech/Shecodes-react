@@ -10,13 +10,9 @@ body,
   margin: 0;
 }
 body {
-  background: linear-gradient(
-    rgb(150, 167, 189) 5%,
-    rgb(252, 201, 201) 21%,
-    rgb(196, 137, 137) 97%
-  );
+  background-color: rgb(150, 167, 189);
   width: 75%;
-  margin: 60px auto;
+  margin: auto;
   padding: 20px;
   text-align: center;
   color: gray;
